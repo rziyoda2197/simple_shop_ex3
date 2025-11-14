@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="product-list">
+    <h2>Smartfonlar</h2>
+    {% if products %}
+        {% for product in products %}
+        <div class="product-card">
+            <a href="{{ 'product_detail' }}">
+                <img src="{{ url_for('static', filename=product.image) }}" alt="Mahsulot">
+            </a>
+            <h3>{{ product.name }}</h3>
+            <p><strong>Narxi:</strong> {{ product.price }} so‘m</p>
+            <p><strong>Xarakteristikasi:</strong> {{ product.characteristic }} </p>
+        </div>
+        {% endfor %}
+    {% endif %}
+</section>
+
+{% endblock %}

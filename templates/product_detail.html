@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="product-detail">
+    {% if product %}
+        {% for p in product %}
+            <img src="{{ url_for('static', filename=p.image) }}" alt="Mahsulot">
+            <h2>{{ p.name }}</h2>
+            <p><strong>Narxi:</strong> {{ p.price }} so‘m</p>
+            <p><strong>Xotira:</strong> {{ p.memory }} GB</p>
+            <p><strong>Protsessor:</strong> {{ p.protsessor }} </p>
+            <p><strong>Kamera:</strong> {{ p.kamera }}</p>
+            <p><strong>Displey:</strong> {{ p.display }} </p>
+        {% endfor %}
+
+    {% endif %}
+</section>
+
+{% endblock %}

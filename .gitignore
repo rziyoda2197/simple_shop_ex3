@@ -1,0 +1,8 @@
+venv/
+.venv/
+
+instance/
+*.db
+*.sqlite3
+
+

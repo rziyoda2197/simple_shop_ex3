@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="form-section">
+    <h2>Yangi mahsulot qo‘shish</h2>
+    <form id="addProductForm">
+        <label>Mahsulot nomi:</label>
+        <input type="text" id="productName" required>
+
+        <label>Narxi (so‘m):</label>
+        <input type="number" id="productPrice" required>
+
+        <label>Rasm URL manzili:</label>
+        <input type="text" id="productImage" placeholder="https://example.com/image.jpg">
+
+        <button type="submit">Qo‘shish</button>
+    </form>
+    <p id="message"></p>
+</section>
+
+{% endblock %}

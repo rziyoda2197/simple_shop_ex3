@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosh sahifa | Online Magazin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<header>
+    <h1>Online Magazin</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Bosh sahifa</a>
+        <a href="{{ url_for('products') }}">Mahsulotlar</a>
+        <a href="{{ url_for('add_product') }}">Mahsulot qo‘shish</a>
+        <a href="{{ url_for('about') }}">Biz haqimizda</a>
+        <a href="{{ url_for('contact') }}">Aloqa</a>
+    </nav>
+</header>
+
+{% block content %}
+
+{% endblock %}
+ 
+
+<footer>
+    <p>&copy; 2025 Online Magazin</p>
+</footer>
+</body>
+</html>
